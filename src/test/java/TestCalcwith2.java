@@ -22,7 +22,9 @@ public class TestCalcwith2 {
         // Automatically detect the connected device using adb command
         String deviceName = System.getenv("ANDROID_DEVICE") != null ? System.getenv("ANDROID_DEVICE") : "Android";
         Dcp.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-        Dcp.setCapability(MobileCapabilityType.APP, "D:\\InspectorAPk\\com.design.smoon-1.5-APK4Fun.com.apk");
+        // Set APK file from Project Root Folder
+        String apkPath = System.getProperty("user.dir") + "\\InspectorAPk\\com.design.smoon-1.5-APK4Fun.com.apk";
+        Dcp.setCapability(MobileCapabilityType.APP, apkPath);
         Dcp.setCapability("appPackage", "com.design.smoon");
         Dcp.setCapability("appActivity", "com.design.smoon.activities.SplashActivity");
         Dcp.setCapability(MobileCapabilityType.NO_RESET, true);
