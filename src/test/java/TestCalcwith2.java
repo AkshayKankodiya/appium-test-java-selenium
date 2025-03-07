@@ -44,7 +44,7 @@ public class TestCalcwith2 {
         share.click();
 
         Thread.sleep(5000);
-
+        driver.removeApp("com.design.smoon");
         driver.quit();
 
 
